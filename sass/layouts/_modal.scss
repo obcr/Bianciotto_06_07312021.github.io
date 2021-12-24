@@ -1,0 +1,188 @@
+/* Modal form */
+
+.button {
+  background: #4bfe14;
+  margin-top: 0.5em;
+  padding: 1em;
+  color: #fff;
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.button:hover {
+  background: #7b11ac;
+}
+
+.smFont {
+  font-size: 16px;
+}
+
+.injecteNomPhotographe {
+  margin-top: 8px;
+  margin-left: 36px;
+  margin-bottom: 11px;
+  font-family: $basic-font;
+  font-size: 2.5rem;
+  font-weight: normal;
+  color: $black-color;
+  display: inline-block;
+}
+
+.bground {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  background-color: rgba(26, 39, 156, 0.4);
+}
+
+.bgclosed {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  background-color: rgba(26, 39, 156, 0.4);
+}
+
+.content {
+  margin: 5% auto;
+  width: 100%;
+  max-width: 500px;
+  animation-name: modalopen;
+  animation-duration: var(--modal-duration);
+  background: $secondary-bg-color;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  color: #fff;
+  padding-top: 10px;
+}
+
+.content-end {
+  margin: 5% auto;
+  width: 100%;
+  margin-top: 115px;
+  max-width: 500px;
+  animation-name: modalopen;
+  animation-duration: var(--modal-duration);
+  background: $secondary-bg-color;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  color: #fff;
+  padding-top: 10px;
+}
+
+.modal-body,
+.modal-end {
+  padding: 15px 8%;
+  margin: 20px auto;
+}
+
+label {
+  font-family: $basic-font;
+  font-size: 1.2rem;
+  font-weight: normal;
+  color: $black-color;
+  display: inline-block;
+  margin-bottom: 11px;
+}
+input {
+  padding: 8px;
+  border: 0.8px solid #ccc;
+  outline: none;
+}
+.text-control {
+  margin: 0;
+  padding: 8px;
+  width: 100%;
+  border-radius: 8px;
+  font-size: 20px;
+  height: 48px;
+}
+.textarea-control {
+  border: none;
+}
+
+.formData[data-error]::after {
+  content: attr(data-error);
+  font-size: 0.4em;
+  color: #e54858;
+  display: block;
+  margin-top: 7px;
+  margin-bottom: 7px;
+  text-align: left;
+  line-height: 0.3;
+  opacity: 0;
+  transition: 0.3s;
+}
+.formData[data-error-visible="true"]::after {
+  opacity: 1;
+}
+.formData[data-error-visible="true"] .text-control {
+  border: 2px solid #e54858;
+}
+/* 
+  input[data-error]::after {
+      content: attr(data-error);
+      font-size: 0.4em;
+      color: red;
+  } */
+
+.close,
+.close-end {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  width: 32px;
+  height: 32px;
+  opacity: 1;
+  cursor: pointer;
+  transform: scale(0.7);
+}
+.close:before,
+.close-end:before,
+.close:after,
+.close-end:after {
+  position: absolute;
+  left: 15px;
+  content: " ";
+  height: 33px;
+  width: 3px;
+  background-color: #fff;
+}
+.close:before,
+.close-end:before {
+  transform: rotate(45deg);
+}
+.close:after,
+.close-end:after {
+  transform: rotate(-45deg);
+}
+.btn-submit,
+.btn-signup,
+.btn-forward {
+  background: $primary-color;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 29px;
+  border-radius: 7px;
+  font-size: 1rem;
+  padding: 12px 82px;
+  color: #fff;
+  cursor: pointer;
+  border: 0;
+}
+.btn-forward {
+  display: none;
+}

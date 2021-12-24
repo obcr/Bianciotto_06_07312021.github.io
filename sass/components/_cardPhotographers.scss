@@ -1,0 +1,65 @@
+.photographer {
+  display: flex;
+  flex: 1 0 33, 3%;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  text-decoration: none;
+  list-style: none;
+  align-items: center;
+  margin: auto;
+  padding: 20px 20px 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  img {
+    width: 14rem;
+    height: 14rem;
+    object-fit: cover;
+    border-radius: 14rem;
+    margin-bottom: 10px;
+  }
+  h2 {
+    font-family: "DM", sans-serif;
+    font-size: $title;
+    line-height: $title-line-heigth;
+    font-weight: $normal;
+    color: $secondary-color;
+    margin: 0%;
+  }
+  .lieu {
+    font-family: "DM", sans-serif;
+    font-size: $subtitle-2;
+    line-height: $small-subtitle-line-heigth;
+    font-weight: $normal;
+    color: $primary-color;
+    margin: 0%;
+  }
+  .tagline {
+    font-family: "DM", sans-serif;
+    font-size: $small-text;
+    line-height: $small-text-line-heigth;
+    font-weight: $normal;
+    color: $black-color;
+    margin: 0%;
+  }
+  .prix {
+    font-family: "DM", sans-serif;
+    font-size: $tiny-text;
+    line-height: $tiny-text-line-heigth;
+    font-weight: $normal;
+    color: $third-text-color;
+    margin: 0%;
+  }
+  __tags {
+    list-style: none;
+    font-family: "DM", sans-serif;
+    font-size: $tiny-text;
+    line-height: $tiny-text-line-heigth;
+    font-weight: $normal;
+    color: $third-text-color;
+    text-align: center;
+    margin: auto;
+  }
+}
+

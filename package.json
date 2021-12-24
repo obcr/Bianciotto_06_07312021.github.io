@@ -1,0 +1,20 @@
+{
+  "name": "bianciotto_6_07302021",
+  "version": "1.0.0",
+  "description": "Fisheye",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./public/css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/obcr/Bianciotto_6_07302021.git"
+  },
+  "author": "olivier bianciotto",
+  "license": "ISC",
+  "browserslist": "last 4 versions",
+  "bugs": {
+    "url": "https://github.com/obcr/Bianciotto_6_07302021/issues"
+  },
+  "homepage": "https://github.com/obcr/Bianciotto_6_07302021#readme"
+}
