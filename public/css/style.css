@@ -201,11 +201,12 @@ h1 {
 .slider-content figure {
   width: 100%;
   padding: 0;
-  margin: 2rem auto; }
+  margin: 2rem auto;
+  text-align: center; }
 
 .slider-content img {
-  max-width: 60vw;
-  height: 47vh;
+  height: 225px;
+  width: 500px;
   object-fit: cover; }
 
 .slider-content video {

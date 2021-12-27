@@ -489,6 +489,7 @@ const validForm = () => {
   const btnSubmit = document.querySelectorAll(".btn-submit");
   console.log("btnSubmit", btnSubmit);
   btnSubmit.forEach((btn) => btn.addEventListener("click", valid));
+  e.preventDefault();
 };
 
 // Fonction init est le point d entree du fichier photographerPage.js
