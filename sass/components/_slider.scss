@@ -32,6 +32,7 @@
 }
 .fas {
   font-size: 2rem;
+  color: $primary-color;
 }
 #next {
   margin-left: -1rem;
@@ -76,13 +77,16 @@
   text-align: center;
 }
 .slider-content img {
-  height: 225px;
-  width: 500px;
+  height: 392px;
+  width: 696px;
   object-fit: cover;
 }
 .slider-content video {
-  width: auto;
-  height: 30rem;
+  height: 392px;
+  width: 696px;
+}
+.slider-content h2 {
+  text-align: start;
 }
 #message-nav {
   display: flex;
@@ -97,4 +101,3 @@
   font-size: 0.8rem;
   display: none;
 }
-

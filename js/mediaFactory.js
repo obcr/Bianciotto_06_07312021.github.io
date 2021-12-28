@@ -24,7 +24,7 @@ class imgFactory {
     return `
 <div id="photographer_media">
   <figure>
-    <img tabindex="0" class="diapo" src="public/img/${this.photographerId}/${this.image}"/>
+    <img tabindex="0" class="diapo" src="public/img/${this.photographerId}/${this.image}" alt="${this.altText}"/>
       <figcaption>
         <h2 class="mediaTitle">${this.title}</h2>
         <div class="mediaLikes" data-likes="false">
@@ -40,7 +40,7 @@ class imgFactory {
   renderSlide() {
     return `
     <figure class="figureSlider masque">
-     <img src="public/img/${this.photographerId}/${this.image}" class="diapoSlider active" id="${this.id}" />
+     <img src="public/img/${this.photographerId}/${this.image}" class="diapoSlider active" id="${this.id}" alt="${this.altText}"/>
      <figcaption>
       <h2 class="mediaTitle">${this.title}</h2>
      </figcaption>
@@ -66,7 +66,7 @@ class videoFactory {
     return `
     <div id="photographer_media">
     <figure>
-    <video width="250" class="diapo" src="public/img/${this.photographerId}/${this.video}" type="video/mp4"></video>
+    <video width="250" class="diapo" src="public/img/${this.photographerId}/${this.video}" type="video/mp4" alt="${this.altText}"></video>
         <figcaption>
           <h2 class="mediaTitle">${this.title}</h2>
           <div class="mediaLikes">
@@ -82,7 +82,7 @@ class videoFactory {
   renderSlide() {
     return `
     <figure class="figureSlider masque">
-    <video controls width="250">
+    <video controls width="250" controls autoplay title= "${this.altText}">
     <source tabindex="0" class="diapoSlider active" src="public/img/${this.photographerId}/${this.video}" id="${this.id}">
     </video>
      <figcaption>

@@ -61,10 +61,11 @@ const addEventDiapo = () => {
         if (src === diapoSlider[i].getAttribute("src")) {
           // console.log("diapoSlider", diapoSlider[i].getAttribute("src"));
           // console.log("srcTest", i);
-          if(diapoSlider[i].getAttribute("src").includes("mp4")){
-            diapoSlider[i].parentElement.parentElement.classList.toggle("masque");
-          }
-          else{
+          if (diapoSlider[i].getAttribute("src").includes("mp4")) {
+            diapoSlider[i].parentElement.parentElement.classList.toggle(
+              "masque"
+            );
+          } else {
             diapoSlider[i].parentElement.classList.toggle("masque");
           }
           index = i;
@@ -120,8 +121,8 @@ const closeSliderEsc = () => {
   const imageArea = document.getElementById("photographer_media");
   const figureSlider = document.querySelectorAll(".figureSlider");
 
-  document.addEventListener('keydown', (e) =>{
-    if(e.key == "Escape"){
+  document.addEventListener("keydown", (e) => {
+    if (e.key == "Escape") {
       console.log("j ai click esc");
       const figureSlider = document.querySelectorAll(".figureSlider");
       // console.log("insideaddevent")
@@ -239,17 +240,17 @@ const eventClavier = (e) => {
     }
     // console.log("index+", index);
   }
-}
+};
 // Fonction moveSlider parcour le slider avec Evenement au clavier
 const moveSliderClavier = () => {
-console.log("movesliderclavier");
+  console.log("movesliderclavier");
   document.addEventListener("keyup", eventClavier);
 };
 
 const removeEListener = () => {
   document.removeEventListener("keyup", eventClavier);
   console.log("removelist");
-}
+};
 
 // Ouvrir la DropDown
 function openDropdown() {
@@ -452,34 +453,13 @@ function validate() {
   let lastValid = checkLast();
   let emailValid = checkEmail();
 
-  if (
-    firstValid &&
-    lastValid &&
-    emailValid &&
-    birthdateValid &&
-    quantityValid &&
-    locationValid &&
-    checkbox1Valid
-  ) {
+  if (firstValid && lastValid && emailValid && checkbox1Valid) {
     const data = {
       firstValid: firstValid,
       lastValid: lastValid,
       emailValid: emailValid,
     };
     console.log(data);
-    // modalbg.style.display = "none";
-    // modalBody.style.display = "none";
-    // bgclosed.style.display = "block";
-    // modalEnd.innerHTML = "Merci d'avoir soumis vos informations d'inscription.";
-    // modalEnd.style.height = "620px";
-    // modalEnd.style.paddingTop = "300px";
-    // modalEnd.style.paddingLeft = "100px";
-    // modalEnd.style.paddingRight = "100px";
-    // modalEnd.style.textAlign = "center";
-    // forward.style.display = "block";
-    // forward.style.marginBottom = "60px";
-    // forward.addEventListener("click", closeForward);
-    // closeEnd.addEventListener("click", crossClose);
     console.log("okValid");
     return true;
   }
