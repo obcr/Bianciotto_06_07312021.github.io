@@ -72,6 +72,35 @@ const addEventDiapo = () => {
         }
       }
     });
+    slide.addEventListener("keypress", (e) => {
+      if (e.key == "Enter"){
+        moveSliderClavier();
+        let src = slide.getAttribute("src");
+        // console.log("attribut", src);
+        // console.log(slide, "slide");
+        container.style.display = "flex";
+        masquePage.style.display = "none";
+        imageArea.style.display = "none";
+        masque.style.display = "block";
+        sliderBox.style.display = "flex";
+        slider.style.display = "block";
+        const diapoSlider = document.querySelectorAll(".diapoSlider");
+        for (let i = 0; i < diapoSlider.length; i++) {
+          if (src === diapoSlider[i].getAttribute("src")) {
+            // console.log("diapoSlider", diapoSlider[i].getAttribute("src"));
+            // console.log("srcTest", i);
+            if (diapoSlider[i].getAttribute("src").includes("mp4")) {
+              diapoSlider[i].parentElement.parentElement.classList.toggle(
+                "masque"
+              );
+            } else {
+              diapoSlider[i].parentElement.classList.toggle("masque");
+            }
+            index = i;
+          }
+        }
+      }
+    });
   });
   // console.trace("AddEventDiapo");
 };
@@ -279,6 +308,7 @@ function displayPhotographersMedia(dataMedia, toto) {
       addEventDiapo();
       const label = document.querySelector(".label");
       label.innerHTML = value;
+      addLikes()
     });
     addEventDiapo();
   });
@@ -473,7 +503,7 @@ function checkMessage() {
 
 // Function Valid form
 function validate() {
-  console.log("test");
+  // console.log("test");
   let firstValid = checkFirst();
   let lastValid = checkLast();
   let emailValid = checkEmail();
@@ -486,8 +516,14 @@ function validate() {
       emailValid: emailValid,
       messageValid: messageValid,
     };
-    console.log(data);
+    // console.log(data);
     console.log("okValid");
+
+      console.log("Prénom: " + first.value);
+      console.log("Nom: " + last.value);
+      console.log("Adresse mail: " + email.value);
+      console.log("Message: " + message.value);
+
     return true;
   }
 }
@@ -495,7 +531,7 @@ function validate() {
 const validForm = () => {
   const btnSubmit = document.querySelectorAll(".btn-submit");
   console.log("btnSubmit", btnSubmit);
-  btnSubmit.forEach((btn) => btn.addEventListener("click", valid));
+  btnSubmit.forEach((btn) => btn.addEventListener("click", validate));
 };
 
 // Fonction init est le point d entree du fichier photographerPage.js
@@ -528,7 +564,6 @@ async function init() {
   closeModal();
   openDropdown();
   validForm();
-  // validate();
 }
 
 // init(); Elle est la premiere fonction execute et qui va executer en asynchron les autres fonctions inclus dans celle ci
