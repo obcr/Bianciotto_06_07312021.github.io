@@ -1,4 +1,3 @@
-const fetchData = async () => {
-  return await fetch("../data.json").then((reponse) => reponse.json());
-}
+const fetchData = async () => await fetch("./data.json").then((reponse) => reponse.json());
+
 
