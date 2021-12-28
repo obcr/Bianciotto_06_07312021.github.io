@@ -8,6 +8,9 @@
   margin: 2px;
   list-style: none;
   text-decoration: none;
+  &:hover{
+    background-color: $secondary-bg-color;
+  }
 }
 
 .photographer__tags {

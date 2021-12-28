@@ -14,6 +14,9 @@ button.button-contact.button {
   color: white;
   background-color: #901c1c;
   border-radius: 5px;
+  &:hover{
+    background-color: $secondary-bg-color;
+  }
 }
 
 .photographer_section {

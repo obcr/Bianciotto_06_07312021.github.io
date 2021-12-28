@@ -389,8 +389,15 @@ const closeModal = () => {
   });
 };
 
-// Fonction check form
 
+// formulaire display no
+const form = document.querySelector("form");
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+});
+
+// Fonction check form
 function checkFirst() {
   const first = document.getElementById("first");
   if (first.value.length >= 2) {
@@ -446,18 +453,38 @@ function checkEmail() {
   }
 }
 
+function checkMessage() {
+  const message = document.getElementById("message");
+  if (message.value.length < 5) {
+    message.closest(".formData")
+    .setAttribute(
+      "data-error",
+      "Veuillez entrer 5 caractères ou plus."
+    );
+    message.closest(".formData").setAttribute("data-error-visible", true);
+    console.log("messsagefalse");
+    return false;
+  } else {
+    message.closest(".formData").setAttribute("data-error-visible", false);
+    console.log("messsagetrue");
+    return true;
+  }
+}
+
 // Function Valid form
 function validate() {
   console.log("test");
   let firstValid = checkFirst();
   let lastValid = checkLast();
   let emailValid = checkEmail();
+  let messageValid = checkMessage();
 
-  if (firstValid && lastValid && emailValid && checkbox1Valid) {
+  if (firstValid && lastValid && emailValid && messageValid) {
     const data = {
       firstValid: firstValid,
       lastValid: lastValid,
       emailValid: emailValid,
+      messageValid: messageValid,
     };
     console.log(data);
     console.log("okValid");
@@ -469,7 +496,6 @@ const validForm = () => {
   const btnSubmit = document.querySelectorAll(".btn-submit");
   console.log("btnSubmit", btnSubmit);
   btnSubmit.forEach((btn) => btn.addEventListener("click", valid));
-  e.preventDefault();
 };
 
 // Fonction init est le point d entree du fichier photographerPage.js
@@ -501,7 +527,7 @@ async function init() {
   openModal();
   closeModal();
   openDropdown();
-  // validForm();
+  validForm();
   // validate();
 }
 
