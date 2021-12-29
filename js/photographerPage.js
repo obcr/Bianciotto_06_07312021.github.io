@@ -73,7 +73,7 @@ const addEventDiapo = () => {
       }
     });
     slide.addEventListener("keypress", (e) => {
-      if (e.key == "Enter"){
+      if (e.key == "Enter") {
         moveSliderClavier();
         let src = slide.getAttribute("src");
         // console.log("attribut", src);
@@ -308,7 +308,7 @@ function displayPhotographersMedia(dataMedia, toto) {
       addEventDiapo();
       const label = document.querySelector(".label");
       label.innerHTML = value;
-      addLikes()
+      addLikes();
     });
     addEventDiapo();
   });
@@ -419,7 +419,6 @@ const closeModal = () => {
   });
 };
 
-
 // formulaire display no
 const form = document.querySelector("form");
 
@@ -432,7 +431,7 @@ function checkFirst() {
   const first = document.getElementById("first");
   if (first.value.length >= 2) {
     first.closest(".formData").setAttribute("data-error-visible", false);
-    console.log("firsttrue");
+    // console.log("firsttrue");
     return true;
   } else {
     first
@@ -442,7 +441,7 @@ function checkFirst() {
         "Veuillez entrer 2 caractères ou plus pour le champ du prénom."
       );
     first.closest(".formData").setAttribute("data-error-visible", true);
-    console.log("firstfalse");
+    // console.log("firstfalse");
     return false;
   }
 }
@@ -451,7 +450,7 @@ function checkLast() {
   const last = document.getElementById("last");
   if (last.value.length >= 2) {
     last.closest(".formData").setAttribute("data-error-visible", false);
-    console.log("lasttrue");
+    // console.log("lasttrue");
     return true;
   } else {
     last
@@ -461,7 +460,7 @@ function checkLast() {
         "Veuillez entrer 2 caractères ou plus pour le champ du nom."
       );
     last.closest(".formData").setAttribute("data-error-visible", true);
-    console.log("lastfalse");
+    // console.log("lastfalse");
     return false;
   }
 }
@@ -471,14 +470,14 @@ function checkEmail() {
   let regexEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
   if (regexEmail.test(email.value)) {
     email.closest(".formData").setAttribute("data-error-visible", false);
-    console.log("mailtrue");
+    // console.log("mailtrue");
     return true;
   } else {
     email
       .closest(".formData")
       .setAttribute("data-error", "Veuillez indiquer votre email.");
     email.closest(".formData").setAttribute("data-error-visible", true);
-    console.log("mailfalse");
+    // console.log("mailfalse");
     return false;
   }
 }
@@ -486,17 +485,15 @@ function checkEmail() {
 function checkMessage() {
   const message = document.getElementById("message");
   if (message.value.length < 5) {
-    message.closest(".formData")
-    .setAttribute(
-      "data-error",
-      "Veuillez entrer 5 caractères ou plus."
-    );
+    message
+      .closest(".formData")
+      .setAttribute("data-error", "Veuillez entrer 5 caractères ou plus.");
     message.closest(".formData").setAttribute("data-error-visible", true);
-    console.log("messsagefalse");
+    // console.log("messsagefalse");
     return false;
   } else {
     message.closest(".formData").setAttribute("data-error-visible", false);
-    console.log("messsagetrue");
+    // console.log("messsagetrue");
     return true;
   }
 }
@@ -517,12 +514,12 @@ function validate() {
       messageValid: messageValid,
     };
     // console.log(data);
-    console.log("okValid");
+    // console.log("okValid");
 
-      console.log("Prénom: " + first.value);
-      console.log("Nom: " + last.value);
-      console.log("Adresse mail: " + email.value);
-      console.log("Message: " + message.value);
+    console.log("Prénom: " + first.value);
+    console.log("Nom: " + last.value);
+    console.log("Adresse mail: " + email.value);
+    console.log("Message: " + message.value);
 
     return true;
   }
@@ -530,7 +527,7 @@ function validate() {
 
 const validForm = () => {
   const btnSubmit = document.querySelectorAll(".btn-submit");
-  console.log("btnSubmit", btnSubmit);
+  // console.log("btnSubmit", btnSubmit);
   btnSubmit.forEach((btn) => btn.addEventListener("click", validate));
 };
 

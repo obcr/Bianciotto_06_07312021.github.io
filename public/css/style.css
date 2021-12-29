@@ -257,7 +257,6 @@ h1 {
   min-height: 2em;
   max-height: 2em;
   overflow: hidden;
-  top: 0.5em;
   cursor: pointer;
   text-align: left;
   white-space: nowrap;
@@ -502,9 +501,7 @@ label {
   font-size: 1.2rem;
   font-weight: normal;
   color: #000000;
-  display: inline-block;
-  margin-top: 13px;
-  margin-bottom: 5px; }
+  display: inline-block; }
 
 input {
   padding: 8px;

@@ -1,5 +1,5 @@
 /* Modal form */
-.formData{
+.formData {
   width: 96%;
 }
 // .button {
@@ -105,8 +105,6 @@ label {
   font-weight: normal;
   color: $black-color;
   display: inline-block;
-  margin-top: 13px;
-  margin-bottom: 5px;
 }
 input {
   padding: 8px;
@@ -193,7 +191,7 @@ input {
   color: #fff;
   cursor: pointer;
   border: 0;
-  &:hover{
+  &:hover {
     background: $secondary-color;
   }
 }
