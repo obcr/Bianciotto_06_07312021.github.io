@@ -2,29 +2,11 @@
 .formData {
   width: 96%;
 }
-// .button {
-//   background: #4bfe14;
-//   margin-top: 0.5em;
-//   padding: 1em;
-//   color: #fff;
-//   border-radius: 15px;
-//   cursor: pointer;
-//   font-size: 16px;
-// }
-
-// .button:hover {
-//   background: #7b11ac;
-// }
-
-// .smFont {
-//   font-size: 16px;
-// }
-
 .injecteNomPhotographe {
   margin-left: 36px;
   font-family: $basic-font;
-  font-size: 2rem;
-  font-weight: $extra-bold;
+  font-size: 2.5rem;
+  font-weight: $normal;
   color: $black-color;
   display: inline-block;
 }
@@ -69,26 +51,11 @@
     margin-left: 36px;
     margin-bottom: 0;
     font-family: $basic-font;
-    font-size: 2rem;
-    font-weight: $extra-bold;
+    font-size: 2.5rem;
+    font-weight: $normal;
     color: #000000;
   }
 }
-
-// .content-end {
-//   margin: 5% auto;
-//   width: 100%;
-//   margin-top: 115px;
-//   max-width: 500px;
-//   animation-name: modalopen;
-//   animation-duration: var(--modal-duration);
-//   background: $secondary-bg-color;
-//   border-radius: 10px;
-//   overflow: hidden;
-//   position: relative;
-//   color: #fff;
-//   padding-top: 10px;
-// }
 
 .modal-body,
 .modal-end {
@@ -101,6 +68,8 @@
 
 label {
   font-family: $basic-font;
+  margin-bottom: 0.2rem;
+  margin-top: 0.3rem;
   font-size: 1.2rem;
   font-weight: normal;
   color: $black-color;
@@ -133,8 +102,9 @@ input {
 
 .formData[data-error]::after {
   content: attr(data-error);
+  font-family: $basic-font;
   font-size: 0.8em;
-  color: #e54858;
+  color: $black-color;
   display: block;
   margin-top: 7px;
   margin-bottom: 7px;
@@ -147,7 +117,7 @@ input {
   opacity: 1;
 }
 .formData[data-error-visible="true"] .text-control {
-  border: 2px solid #e54858;
+  border: 2px solid $black-color;
 }
 .close,
 .close-end {

@@ -14,9 +14,9 @@
     border-radius: 5px;
   }
   figcaption {
-    font-size: 18px;
-    color: #901c1c;
-    font-weight: 400;
+    // font-size: 18px;
+    // color: #901c1c;
+    // font-weight: 400;
     background-color: white;
     padding: 0.5rem 0;
     margin-bottom: 0.2rem;
@@ -24,13 +24,9 @@
     flex-direction: row;
     justify-content: space-between;
   }
-  // figcaption i {
-  //   color: #db8876;
-  // }
-  // .heart {
-  //   color: #901c1c;
-  // }
   .mediaTitle {
+    color: #901c1c;
+    font-family: $basic-font;
     margin: 0;
     font-size: 1.3rem;
     font-weight: 400;
@@ -47,6 +43,11 @@
     padding: 0;
     background-color: #525252;
   }
+}
+
+.counter{
+  font-family: $basic-font;
+  color: #901c1c;
 }
 
 #heart {

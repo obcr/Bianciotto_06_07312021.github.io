@@ -1,4 +1,5 @@
 .stiky {
+  font-family: $basic-font;
   position: fixed;
   display: flex;
   align-items: center;
@@ -13,7 +14,7 @@
   .fa-heart {
     font-size: medium;
     margin-left: 4px;
-    margin-right: 4px;
+    margin-right: 25px;
   }
 }
 .likes-widget {

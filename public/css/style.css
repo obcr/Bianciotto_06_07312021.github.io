@@ -30,6 +30,7 @@ h1 {
   font-family: "DM Sans", sans-serif; }
 
 .stiky {
+  font-family: "DM Sans", sans-serif;
   position: fixed;
   display: flex;
   align-items: center;
@@ -44,7 +45,7 @@ h1 {
   .stiky .fa-heart {
     font-size: medium;
     margin-left: 4px;
-    margin-right: 4px; }
+    margin-right: 25px; }
 
 .likes-widget {
   display: flex;
@@ -68,7 +69,8 @@ h1 {
   list-style: none;
   text-decoration: none; }
   .photographer__tags__tag:hover {
-    background-color: #db8876; }
+    background-color: #901c1c;
+    color: #ffffff; }
 
 .photographer__tags {
   display: flex;
@@ -82,7 +84,7 @@ h1 {
 .banner__tag-nav .photographer__tags__tag {
   cursor: pointer; }
   .banner__tag-nav .photographer__tags__tag:hover {
-    background: #911c1c;
+    background: #901c1c;
     color: #ffffff; }
 
 .photographer {
@@ -167,8 +169,7 @@ h1 {
   max-height: 98%; }
 
 .fas {
-  font-size: 2rem;
-  color: #901c1c; }
+  font-size: 2rem; }
 
 #next {
   margin-left: -1rem;
@@ -222,6 +223,9 @@ h1 {
   width: 696px; }
 
 .slider-content h2 {
+  font-family: "DM Sans", sans-serif;
+  font-weight: 400;
+  font-size: 2rem;
   text-align: start; }
 
 #message-nav {
@@ -344,9 +348,6 @@ h1 {
     background-color: black;
     border-radius: 5px; }
   #photographer_media figcaption {
-    font-size: 18px;
-    color: #901c1c;
-    font-weight: 400;
     background-color: white;
     padding: 0.5rem 0;
     margin-bottom: 0.2rem;
@@ -354,6 +355,8 @@ h1 {
     flex-direction: row;
     justify-content: space-between; }
   #photographer_media .mediaTitle {
+    color: #901c1c;
+    font-family: "DM Sans", sans-serif;
     margin: 0;
     font-size: 1.3rem;
     font-weight: 400; }
@@ -367,6 +370,10 @@ h1 {
     height: 21rem;
     padding: 0;
     background-color: #525252; }
+
+.counter {
+  font-family: "DM Sans", sans-serif;
+  color: #901c1c; }
 
 #heart {
   cursor: pointer;
@@ -441,8 +448,8 @@ h1 {
 .injecteNomPhotographe {
   margin-left: 36px;
   font-family: "DM Sans", sans-serif;
-  font-size: 2rem;
-  font-weight: 700;
+  font-size: 2.5rem;
+  font-weight: 400;
   color: #000000;
   display: inline-block; }
 
@@ -484,8 +491,8 @@ h1 {
     margin-left: 36px;
     margin-bottom: 0;
     font-family: "DM Sans", sans-serif;
-    font-size: 2rem;
-    font-weight: 700;
+    font-size: 2.5rem;
+    font-weight: 400;
     color: #000000; }
 
 .modal-body,
@@ -498,6 +505,8 @@ h1 {
 
 label {
   font-family: "DM Sans", sans-serif;
+  margin-bottom: 0.2rem;
+  margin-top: 0.3rem;
   font-size: 1.2rem;
   font-weight: normal;
   color: #000000;
@@ -529,8 +538,9 @@ input {
 
 .formData[data-error]::after {
   content: attr(data-error);
+  font-family: "DM Sans", sans-serif;
   font-size: 0.8em;
-  color: #e54858;
+  color: #000000;
   display: block;
   margin-top: 7px;
   margin-bottom: 7px;
@@ -543,7 +553,7 @@ input {
   opacity: 1; }
 
 .formData[data-error-visible="true"] .text-control {
-  border: 2px solid #e54858; }
+  border: 2px solid #000000; }
 
 .close,
 .close-end {

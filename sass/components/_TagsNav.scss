@@ -9,7 +9,8 @@
   list-style: none;
   text-decoration: none;
   &:hover{
-    background-color: $secondary-bg-color;
+    background-color: $primary-color;
+    color: #ffffff;
   }
 }
 
@@ -26,7 +27,7 @@
 .banner__tag-nav .photographer__tags__tag {
   cursor: pointer;
 &:hover{
-  background: #911c1c;
+  background: $primary-color;
   color: #ffffff;
 }
 }
