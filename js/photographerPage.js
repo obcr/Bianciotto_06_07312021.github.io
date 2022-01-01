@@ -410,10 +410,10 @@ const openModal = () => {
 
 // Fonction close modal
 const closeModal = () => {
-  const closeModal = document.querySelector(".close");
+  const closeModalCross = document.querySelector(".close");
   // console.log("closeModal", closeModal);
   const modalbg = document.querySelector(".bground");
-  closeModal.addEventListener("click", () => {
+  closeModalCross.addEventListener("click", () => {
     // console.log("closeModal");
     modalbg.style.display = "none";
   });
@@ -520,11 +520,12 @@ function validate() {
     console.log("Nom: " + last.value);
     console.log("Adresse mail: " + email.value);
     console.log("Message: " + message.value);
-
     return true;
+
   }
 }
 
+// Fonction validForm verifie et recupere les donnees formulaire au click submit
 const validForm = () => {
   const btnSubmit = document.querySelectorAll(".btn-submit");
   // console.log("btnSubmit", btnSubmit);
