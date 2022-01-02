@@ -1,3 +1,4 @@
+// Pour Afficher le bon Photographe
 const getId = () => {
   // recuperation de la chaine de requête dans son url
   const queryString_url_id = window.location.search;
@@ -17,7 +18,7 @@ const getId = () => {
 const updateMediaGalery = (imagesDuPhotographe) => {
   // console.log qui affiche update de images !
   // console.log('updateMediaGalery');
-  // console.log(imagesDuPhotographe);
+  console.log(imagesDuPhotographe);
   const imageArea = document.getElementById("photographer_media");
   // efface le contenu precedent
   imageArea.innerHTML = "";
@@ -354,7 +355,7 @@ function addLikes() {
     element.addEventListener("click", () => {
       // Stocker la valeur du compteur dans une variable COUNT
       let count = parseInt(element.children[0].innerHTML);
-      // parseInt element.children[0] renvoie le premier element enfanf de la div
+      // parseInt element.children[0] [0] = renvoie le premier element enfant de la div [1] = renvoie le deuxieme element enfant de la div
       // <div class="mediaLikes" data-likes="false">
       //   1er element ENFANT <span id="counter" data-id="${this.id}">${this.likes}</span>
       //   2eme element ENFANT <span id="heart" class=" "><i tabindex="0" class="heart fas fa-heart" data-id="${this.id}"></i></span>
