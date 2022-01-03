@@ -367,10 +367,10 @@ function addLikes() {
       // 2. Si on clique dessus, on incrémente le compteur, sinon on décrémente-le
       if (element.classList.contains("clicked")) {
         element.children[0].innerHTML = ++count;
-        totalLikesMediaPhotographer(element);
+        totalLikesMediaPhotographer();
       } else {
         element.children[0].innerHTML = --count;
-        totalLikesMediaPhotographer(element);
+        totalLikesMediaPhotographer();
       }
     });
   });
