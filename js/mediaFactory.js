@@ -1,12 +1,12 @@
 // Creation de la class mediaFactory
-class mediaFactory {
+class MediaFactory {
   constructor(data) {
-    if (data.type === "img") return new imgFactory(data);
-    if (data.type === "video") return new videoFactory(data);
+    if (data.type === "img") return new ImgageFactory(data);
+    if (data.type === "video") return new VideoFactory(data);
   }
 }
 // Creation de la class imgFactory
-class imgFactory {
+class ImgageFactory {
   constructor(data) {
     this.id = data.id;
     this.photographerId = data.photographerId;
@@ -48,7 +48,7 @@ class imgFactory {
   }
 }
 // Creation de la class videoFactory
-class videoFactory {
+class VideoFactory {
   constructor(data) {
     this.id = data.id;
     this.photographerId = data.photographerId;

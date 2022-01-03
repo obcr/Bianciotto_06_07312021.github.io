@@ -103,3 +103,59 @@
   font-size: 0.8rem;
   display: none;
 }
+
+
+/* Sur tous types d'écran, quand la largeur de la fenêtre est comprise entre 375px et 767px */
+@media screen and (min-width: 426px) and (max-width: 780px)
+{
+.slider-content img {
+  height: 352px;
+  width: 100%;
+ }
+.slider-content video {
+  height: 352px;
+  width: 100%;
+ }
+}
+
+
+
+@media screen and (min-width: 320px) and (max-width: 425px)
+{
+.slider-content img {
+  height: 125px;
+  width: 100%;
+ }
+.slider-content video {
+  height: 125px;
+  width: 100%;
+ }
+ .fas {
+  font-size: 1rem;
+}
+#next {
+  margin-left: -0.5rem;
+  margin-bottom: 2rem;
+}
+#previous {
+  margin-bottom: 2rem;
+}
+#close-slider {
+  margin-left: -0.5rem;
+  margin-top: 2rem;
+  height: 4rem;
+}
+body{
+  padding: 0;
+}
+.slider-content h2 {
+  font-size: 1rem;
+}
+.slider_box {
+  padding: 0;
+ }
+ .slider-content {
+margin: 0;
+width: 100%;
+}
+}

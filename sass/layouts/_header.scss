@@ -56,3 +56,19 @@
     align-content: space-between;
   }
 }
+
+
+
+/* Sur tous types d'écran, quand la largeur de la fenêtre est comprise entre 375px et 767px */
+@media screen and (min-width: 320px) and (max-width: 767px)
+{
+.banner {
+        flex-wrap: wrap;
+ }
+.banner-tag-nav {
+        order: 3;
+ }
+.header__title__text {
+        font-size: 14px;
+ }
+}

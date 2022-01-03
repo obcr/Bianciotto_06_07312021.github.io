@@ -25,7 +25,7 @@ const updateMediaGalery = (imagesDuPhotographe) => {
   // for (let newimagesDuPhotographe of imagesDuPhotographe) { 1 er facon
   //   for (let i=0; i<imagesDuPhotographe.length; i++) { 2 eme facon
   imagesDuPhotographe.forEach((image) => {
-    let createImageHtml = new mediaFactory(image);
+    let createImageHtml = new MediaFactory(image);
     imageArea.innerHTML += createImageHtml.photographersIndexPage();
   });
   initSlider(imagesDuPhotographe);
@@ -112,7 +112,7 @@ const initSlider = (images) => {
   const slider = document.querySelector(".slider-content");
   slider.innerHTML = " ";
   images.forEach((image) => {
-    let createImageSliderHtml = new mediaFactory(image);
+    let createImageSliderHtml = new MediaFactory(image);
     slider.innerHTML += createImageSliderHtml.renderSlide();
     slider.style.display = "none";
     sliderBox.style.display = "none";
@@ -349,6 +349,7 @@ const filterByOption = (mediaSelect, filtre) => {
 function addLikes() {
   // Sélectionner des éléments
   const mediaLikes = document.querySelectorAll(".mediaLikes");
+  const likesWidget = document.querySelector("#likes-widget");
   // console.log("click coeur", mediaLikes);
   // Ajouter un événement de clic pour chaque icône de cœur
   mediaLikes.forEach((element) => {
@@ -366,8 +367,10 @@ function addLikes() {
       // 2. Si on clique dessus, on incrémente le compteur, sinon on décrémente-le
       if (element.classList.contains("clicked")) {
         element.children[0].innerHTML = ++count;
+        totalLikesMediaPhotographer(element);
       } else {
         element.children[0].innerHTML = --count;
+        totalLikesMediaPhotographer(element);
       }
     });
   });
@@ -392,7 +395,7 @@ const totalLikesMediaPhotographer = () => {
   // 6 on pointe l element
   likesWidget.innerHTML = counters;
   // 7 on injecte counters dans l element pointe
-  // console.log(counters);
+  console.log(counters);
 };
 
 // Fonction open modal
