@@ -492,7 +492,7 @@ h1 {
   .banner {
     flex-wrap: wrap; }
 
-  .banner-tag-nav {
+  .banner__tag-nav {
     order: 3; }
 
   .header__title__text {
