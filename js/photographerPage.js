@@ -56,7 +56,7 @@ const addEventDiapo = () => {
       imageArea.style.display = "none";
       masque.style.display = "block";
       sliderBox.style.display = "flex";
-      slider.style.display = "block";
+      slider.style.display = "flex";
       const diapoSlider = document.querySelectorAll(".diapoSlider");
       for (let i = 0; i < diapoSlider.length; i++) {
         if (src === diapoSlider[i].getAttribute("src")) {
