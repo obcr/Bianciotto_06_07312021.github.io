@@ -83,3 +83,24 @@ button.button-contact.button {
     padding-left: 0%;
   }
 }
+
+
+
+/* Sur tous types d'écran, quand la largeur de la fenêtre est comprise entre 375px et 767px */
+@media screen and (min-width: 320px) and (max-width: 767px)
+{
+  .photographer_image {
+    width: 100px;
+    height: 100px;
+}
+  .button.button-contact.button {
+    position: fixed;
+    bottom: 30px;
+}
+  .photographer_section {
+    padding: 5px;
+}
+  .photographer_info {
+    width: inherit;
+}
+}
