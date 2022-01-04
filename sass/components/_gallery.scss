@@ -23,6 +23,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
   }
   .mediaTitle {
     color: #901c1c;
@@ -61,3 +62,28 @@
 #photographer_media video:focus {
   border: solid 4px #525252;
 }
+
+
+
+/* Sur tous types d'écran, quand la largeur de la fenêtre est comprise entre 375px et 767px */
+@media screen and (min-width: 320px) and (max-width: 374px)
+{
+  #photographer_media {
+    margin-top: 0;
+  }
+  #photographer_media img {
+    width: 16rem;
+    height: 16rem;
+  }
+  #photographer_media video {
+    width: 16rem;
+    height: 16rem;
+  }
+  #photographer_media figure {
+    width: 16rem;
+    height: 16rem;
+  }
+}
+
+
+

@@ -7,8 +7,8 @@
 .container {
   margin: auto;
   padding: 0px 25px 0px 25px;
-  display: flex;
-  flex-direction: column;
+  // display: flex;
+  // flex-direction: column;
   max-width: 1200px;
   max-height: 1024px;
   // margin: auto;
@@ -25,6 +25,8 @@
   }
 }
 .slider_box {
+  display: flex;
+  // flex-direction: column;
   padding: 70px;
   display: none;
   align-items: center;
@@ -34,17 +36,29 @@
   font-size: 2rem;
 }
 #next {
-  margin-left: -1rem;
-  margin-bottom: 4rem;
+  // margin-left: -1rem;
+  margin-bottom: 5rem;
+  color: $primary-color;
 }
 #previous {
-  margin-bottom: 4rem;
+  margin-bottom: 5rem;
+  color: $primary-color;
 }
 #close-slider {
-  margin-left: -0.5rem;
-  margin-top: 2rem;
-  height: 4rem;
+  position: absolute;
+  margin-left: 52.5rem;
+  margin-top: 6rem;
+  color: $primary-color;
+  // height: 4rem;
 }
+
+
+    // margin-left: -0.5rem;
+    // margin-top: 2rem;
+    // height: 4rem;
+
+
+
 .screen-reader-text {
   border: 0;
   clip: rect(1px, 1px, 1px, 1px);
@@ -58,10 +72,10 @@
   width: 1px;
   word-wrap: normal;
 }
-.close-slider {
-  display: flex;
-  flex-direction: row;
-}
+// .close-slider {
+//   display: flex;
+//   flex-direction: row;
+// }
 .slider-content {
   padding: 0 30px;
   border-radius: 8px;
@@ -76,19 +90,21 @@
   text-align: center;
 }
 .slider-content img {
-  height: 392px;
+  height: 615px;
   width: 696px;
   object-fit: cover;
 }
 .slider-content video {
-  height: 392px;
+  height: 615px;
   width: 696px;
+  background-color: #525252;
 }
 .slider-content h2 {
   font-family: $basic-font;
   font-weight: $normal;
   font-size: 2rem;
   text-align: start;
+  margin-top: 0.5rem;
 }
 #message-nav {
   display: flex;
@@ -120,34 +136,41 @@
 
 
 
-@media screen and (min-width: 320px) and (max-width: 780px)
+@media screen and (min-width: 320px) and (max-width: 425px)
 {
+.container {
+padding: 0;
+}
 .slider-content img {
-  height: 250px;
-  width: 100%;
+  height: 221px;
+  width: 221px;
  }
+//  height: 250px;
+//  width: 100%;
 .slider-content video {
-  height: 250px;
-  width: 100%;
+  height: 221px;
+  width: 221px;
+  // margin-top: -77px;
+  background-color: #525252;
+  // height: 125px;
+  // width: 100%;
  }
  .fas {
   font-size: 1rem;
 }
 #next {
-  margin-left: -0.5rem;
   margin-bottom: 2rem;
 }
 #previous {
   margin-bottom: 2rem;
 }
 #close-slider {
-  margin-left: -0.5rem;
-  margin-top: 13.7em;
-  height: 4rem;
+  margin-left: 16.4rem;
+  margin-top: 30.6rem;
 }
-body{
-  padding: 0;
-}
+// body{
+//   padding: 0;
+// }
 .slider-content h2 {
   font-size: 1rem;
 }
@@ -159,6 +182,7 @@ margin: 0;
 width: 100%;
 min-height: 100vh;
 align-items: center;
+padding: 0 16px;
 }
 }
 

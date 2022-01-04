@@ -168,3 +168,35 @@ input {
 .btn-forward {
   display: none;
 }
+
+
+
+@media screen and (min-width: 320px) and (max-width: 425px){
+  .content {
+    margin: 0;
+    min-width: 320px;
+    max-width: 425px;
+  }
+  #message.text-control {
+    height: 165px;
+  }
+  .injecteNomPhotographe {
+    margin-left: 26px;
+    font-size: 2rem;
+  }
+  .content h2 {
+    margin-left: 26px;
+    font-size: 2rem;
+  }
+  .modal-body, .modal-end {
+    margin-top: 3%;
+  }
+  label {
+    margin-bottom: 0.7rem;
+    margin-top: 1.2rem;
+  }
+  .btn-submit, .btn-signup, .btn-forward {
+  margin-left: auto;
+  margin-right: auto;
+  }
+}
