@@ -183,8 +183,8 @@ h1 {
 
 #close-slider {
   position: absolute;
-  margin-left: 52.5rem;
-  margin-top: 6rem;
+  margin-left: 48.5rem;
+  margin-top: -42rem;
   color: #901c1c; }
 
 .screen-reader-text {
@@ -244,9 +244,6 @@ h1 {
   display: none; }
 
 @media screen and (min-width: 320px) and (max-width: 425px) {
-  .container {
-    padding: 0; }
-
   .slider-content img {
     height: 221px;
     width: 221px; }
@@ -267,13 +264,14 @@ h1 {
 
   #close-slider {
     margin-left: 16.4rem;
-    margin-top: 30.6rem; }
+    margin-top: -16rem; }
 
   .slider-content h2 {
     font-size: 1rem; }
 
   .slider_box {
-    padding: 0; }
+    padding: 0;
+    margin: auto; }
 
   .slider-content {
     margin: 0;
