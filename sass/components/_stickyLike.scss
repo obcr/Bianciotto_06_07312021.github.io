@@ -1,0 +1,40 @@
+.stiky {
+  font-family: $basic-font;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  margin-right: 30px;
+  top: 93%;
+  left: 75%;
+  background: #db8876;
+  height: 7vh;
+  padding: 0 15px;
+  z-index: 2;
+  border-radius: 5px;
+  .fa-heart {
+    font-size: medium;
+    margin-left: 4px;
+    margin-right: 25px;
+  }
+}
+.likes-widget {
+  display: flex;
+  align-items: center;
+  margin-right: 30px;
+}
+.likes-widget p {
+  color: black;
+  margin-left: 5px;
+  font-weight: 500;
+  font-size: 24px;
+}
+
+
+
+/* Sur tous types d'écran, quand la largeur de la fenêtre est comprise entre 375px et 767px */
+@media screen and (max-width: 767px)
+{
+  .stiky {
+    display: none;
+  }
+}

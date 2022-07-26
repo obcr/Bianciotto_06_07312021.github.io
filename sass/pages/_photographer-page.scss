@@ -1,0 +1,115 @@
+.order {
+  display: flex;
+  flex-direction: row;
+  height: 2em;
+}
+
+button.button-contact.button {
+  height: 1rem;
+  border: none;
+  padding: 1.5rem 1rem;
+  line-height: 0.2rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: white;
+  background-color: #901c1c;
+  border-radius: 5px;
+  &:hover{
+    background-color: $secondary-bg-color;
+  }
+}
+
+.photographer_section {
+  display: flex;
+  overflow: hidden; /* Empêche le dépassement des flottants. */
+  flex: 1 0 33, 3%;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  background-color: $third-bg-color;
+  padding-right: 50px;
+  padding-left: 50px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.photographer_portrait {
+  display: flex;
+  flex-grow: 1;
+  justify-content: flex-end;
+}
+
+.photographer_image {
+  width: 14rem;
+  height: 14rem;
+  object-fit: cover;
+  border-radius: 14rem;
+}
+
+.photographer_info {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  h2 {
+    margin: 0;
+    font-family: $basic-font;
+    font-size: $title;
+    line-height: $title-line-heigth;
+    font-weight: $normal;
+    color: $secondary-color; 
+  }
+  .lieu {
+    font-family: "DM", sans-serif;
+    font-size: $subtitle-2;
+    line-height: $small-subtitle-line-heigth;
+    font-weight: $normal;
+    color: $primary-color;
+    margin: 0%;
+  }
+  .tagline {
+    font-family: $basic-font;
+    font-size: $small-text;
+    line-height: $small-text-line-heigth;
+    font-weight: $normal;
+    color: $black-color;
+    margin: 0%;
+  }
+  ul.photographer__tags{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    list-style: none;
+    margin-top: 10px;
+    padding-left: 0%;
+  }
+}
+
+
+
+/* Sur tous types d'écran, quand la largeur de la fenêtre est comprise entre 375px et 767px */
+@media screen and (min-width: 320px) and (max-width: 767px)
+{
+  .photographer_image {
+    width: 100px;
+    height: 100px;
+}
+.photographer_info h2 {
+  font-size: 30px;
+  line-height: 34px;
+}
+  button.button-contact.button {
+    position: fixed;
+    bottom: 30px;
+    width: 250px;
+    left: 50%;
+    margin-left: -125px;
+}
+  .photographer_section {
+    padding: 5px;
+}
+  .photographer_info {
+    width: inherit;
+}
+}
+
+

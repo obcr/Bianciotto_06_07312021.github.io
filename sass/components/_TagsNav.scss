@@ -1,0 +1,36 @@
+.photographer__tags__tag {
+  border: 0.5px solid $black-color;
+  color: $primary-color;
+  font-size: $tag;
+  font-family: $basic-font;
+  border-radius: 11px;
+  padding: 0px 6px 0px 6px;
+  margin: 2px;
+  list-style: none;
+  text-decoration: none;
+  &:hover{
+    background-color: $primary-color;
+    color: #ffffff;
+  }
+}
+
+.photographer__tags {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  padding-left: 0%;
+  margin: auto;
+}
+
+.banner__tag-nav .photographer__tags__tag {
+  cursor: pointer;
+&:hover{
+  background: $primary-color;
+  color: #ffffff;
+}
+}
+
+
+

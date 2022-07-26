@@ -1,0 +1,89 @@
+// Fiche photographe
+#photographer_media {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 40px;
+  figure {
+    width: 21rem;
+    height: 21rem;
+    margin: 2rem;
+    padding: 0;
+    background-color: black;
+    border-radius: 5px;
+  }
+  figcaption {
+    // font-size: 18px;
+    // color: #901c1c;
+    // font-weight: 400;
+    background-color: white;
+    padding: 0.5rem 0;
+    margin-bottom: 0.2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .mediaTitle {
+    color: #901c1c;
+    font-family: $basic-font;
+    margin: 0;
+    font-size: 1.3rem;
+    font-weight: 400;
+  }
+  img {
+    width: 21rem;
+    height: 21rem;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+  video {
+    width: 21rem;
+    height: 21rem;
+    padding: 0;
+    background-color: #525252;
+  }
+}
+
+.counter{
+  font-family: $basic-font;
+  color: #901c1c;
+}
+
+#heart {
+  cursor: pointer;
+  color: #901c1c;
+}
+
+#photographer_media img:hover,
+#photographer_media img:focus,
+#photographer_media video:hover,
+#photographer_media video:focus {
+  border: solid 4px #525252;
+}
+
+
+
+/* Sur tous types d'écran, quand la largeur de la fenêtre est comprise entre 375px et 767px */
+@media screen and (min-width: 320px) and (max-width: 374px)
+{
+  #photographer_media {
+    margin-top: 0;
+  }
+  #photographer_media img {
+    width: 16rem;
+    height: 16rem;
+  }
+  #photographer_media video {
+    width: 16rem;
+    height: 16rem;
+  }
+  #photographer_media figure {
+    width: 16rem;
+    height: 16rem;
+  }
+}
+
+
+

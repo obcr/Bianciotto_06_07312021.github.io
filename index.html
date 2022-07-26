@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+  <meta charset="utf-8">
+  <title>Fisheye</title>
+  <meta name="description" content="Fisheye ! Plateform de selection de photographe">
+  <link rel="stylesheet" href="public/css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://kit.fontawesome.com/65c05be77e.js" crossorigin="anonymous"></script>
+  </head>
+
+    <body>
+
+    <!-- Retour Haut Page Version Mobile -->
+    <div class="return">
+      <a class="return__link" href="#content">Passer au contenu</a>
+      </div>
+    
+        <header>
+
+        <!-- Banniere -->
+        <div class="banner">
+
+          <!-- Logo Page Photographe -->
+          <div class="banner__title">
+          <a href="./index.html" aria-label="lien vers page d'accueil de FishEye "><img class="banner__title__logo" src="./public/img/logo.png" alt="FishEye Homepage"/></a>
+          </div>
+
+            <!-- TagsNav -->
+            <nav class="banner__tag-nav" aria-label="photographers categories">
+              <button class="photographer__tags__tag" aria-label="Portrait"><span>#Portrait</span></button>
+              <button class="photographer__tags__tag" aria-label="Art"><span></span>#Art</button>
+              <button class="photographer__tags__tag" aria-label="Fashion"><span>#Fashion</span></button>
+              <button class="photographer__tags__tag" aria-label="Architecture"><span>#Architecture</span></button>
+              <button class="photographer__tags__tag" aria-label="Travel"><span>#Travel</span></button>
+              <button class="photographer__tags__tag" aria-label="Sport"><span>#Sport</span></button>
+              <button class="photographer__tags__tag" aria-label="Animals"><span>#Animals</span></button>
+              <button class="photographer__tags__tag" aria-label="Events"><span>#Events</span></button>
+            </nav>
+
+          <!-- Titre -->
+          <h1 class="header__title__text">Nos photographes</h1>
+        
+        </div>
+
+        </header>
+
+      <!-- Affichage des Photographes Injecte en Javascript -->
+      <main id="content">
+        <div id="photographers"></div>
+      </main>
+
+    <script src="./js/photographers.js"></script>
+    <script src="./js/mediaFactory.js"></script>
+    <script src="./js/fetchApi.js"></script>
+    <script src="./js/index.js"></script>
+
+    </body>
+  </html>

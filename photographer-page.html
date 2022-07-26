@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Fisheye</title>
+    <meta
+      name="description"
+      content="Fisheye ! Plateform de selection de photographe"
+    />
+    <link rel="stylesheet" href="public/css/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script
+      src="https://kit.fontawesome.com/65c05be77e.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <!-- Retour Haut Page Version Mobile -->
+    <div class="return">
+      <a class="return__link" href="#content">Passer au contenu</a>
+    </div>
+
+    <div class="masquePage">
+      <header>
+        <!-- Logo Page Photographe -->
+        <div class="banner_photographer">
+          <div class="banner__title">
+            <a href="./index.html"
+            aria-label="lien vers page d'accueil de FishEye "
+              ><img
+                class="banner__title__logo"
+                src="./public/img/logo.png"
+                alt="Photographers page"
+            /></a>
+          </div>
+        </div>
+      </header>
+
+      <!-- <main id="content_photographer"> -->
+
+      <!-- Affichage de la Section Photographe & Media Injecte en Javascript -->
+      <div id="photographer_section"></div>
+
+      <!-- Trier Select -->
+      <div class="sort">
+        <h2>Trier par</h2>
+        <span class="dropdown-el">
+          <input aria-label="Popularité"
+            type="radio"
+            name="sortType"
+            value="likes"
+            checked="checked"
+            id="sort-relevance"
+          /><label class="label" for="Popularité">Popularité</label>
+          <input aria-label="date"
+            type="radio"
+            name="sortType"
+            value="date"
+            id="sort-best"
+          /><label class="label" for="Date">Date</label>
+          <input aria-label="titre"
+            type="radio"
+            name="sortType"
+            value="title"
+            id="sort-low"
+          /><label class="label" for="Titre">Titre</label>
+        </span>
+      </div>
+
+      <!-- Affichage des Medias du Photographe Injecte en Javascript -->
+      <!-- <div id="photographer_selection"></div> -->
+      <div id="photographer_media"></div>
+
+      <!-- Stiky Box Compteur like & Tarif -->
+
+      <div class="stiky">
+        <p id="likes-widget">like a inserer</p>
+        <i class="fas fa-heart"></i>
+        <p id="price">prix inserer</p>
+        <p>€/jour</p>
+      </div>
+    </div>
+    <!--Slider-->
+
+    <div class="container masque">
+      <!-- <div id="close-slider" tabindex="6" aria-label="close slider">
+        <i class="fas fa-times"></i>
+      </div> -->
+      <div class="slider_box">
+        <div id="close-slider" tabindex="6" aria-label="close slider">
+          <i class="fas fa-times"></i>
+        </div>
+        <div tabindex="5" id="previous" class="arrowSlider">
+          <i role="button" class="fas fa-chevron-left"></i>
+        </div>
+        <div class="close-slider">
+          <div id="message-nav">
+            <div id="message-nav-txt" aria-label="flèches droite et gauche pour naviguer entre les
+            diapos">
+              Utilisez les flèches "droite" et "gauche" pour naviguer entre les
+              diapos
+            </div>
+            <div class="slider-content"></div>
+          </div>
+          <!-- <div id="close-slider" tabindex="6" aria-label="close slider">
+            <i class="fas fa-times"></i>
+          </div> -->
+        </div>
+        <div>
+          <div id="next" class="arrowSlider" tabindex="5">
+            <i role="button" class="fas fa-chevron-right"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- contact form -->
+    <div class="bground">
+      <div class="content">
+        <h2>Contactez-moi</h2>
+        <div class="injecteNomPhotographe">Toto</div>
+        <span class="close"></span>
+        <div class="modal-body">
+          <div class="nomDuPhotographe"></div>
+          <form
+            name="reserve"
+            id="valid"
+            action="index.html"
+            method="get"
+          >
+            <div class="formData">
+              <label for="first">Prénom</label><br />
+              <input
+                tabindex="4"
+                class="text-control"
+                type="text"
+                id="first"
+                name="first"
+                minlength="2"
+              /><br />
+            </div>
+            <div class="formData">
+              <label for="last">Nom</label><br />
+              <input
+                tabindex="4"
+                class="text-control"
+                type="text"
+                id="last"
+                name="last"
+              /><br />
+            </div>
+            <div class="formData">
+              <label for="email">E-mail</label><br />
+              <input
+                tabindex="4"
+                class="text-control"
+                type="email"
+                id="email"
+                name="email"
+              /><br />
+            </div>
+
+            <div class="formData">
+              <label for="message">Votre message</label><br />
+              <textarea
+                tabindex="4"
+                class="text-control textarea-control"
+                id="message"
+                name="message"
+                required="required"
+                minlength="5"
+              ></textarea>
+            </div>
+            <input class="btn-submit" type="submit" value="Envoyer" />
+          </form>
+        </div>
+    </div>
+
+    <!-- </main> -->
+
+    <script src="./js/photographers.js"></script>
+    <script src="./js/fetchApi.js"></script>
+    <script src="./js/mediaFactory.js"></script>
+    <script src="./js/photographerPage.js"></script>
+    
+  </body>
+</html>
